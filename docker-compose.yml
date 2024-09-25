@@ -1,0 +1,63 @@
+version: "3.8"
+services:
+    # PHP Service
+    php:
+        container_name: sftp-app
+        build:
+            context: .
+            target: php
+            args:
+                - APP_ENV=${APP_ENV}
+        command: /docker/entrypoint.sh
+        environment:
+            - APP_ENV=${APP_ENV}
+            - CONTAINER_ROLE=app
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+            - ./docker:/docker
+        ports:
+            - 8802:8802
+        depends_on:
+            - sftp-db
+        networks:
+            - sftp-net
+
+    # Database Server
+    sftp-db:
+        container_name: sftp-db
+        image: mysql:8.0
+        command: --sort_buffer_size=50M
+        ports:
+            - 3311:3311
+        environment:
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+            - TZ=Asia/Shanghai
+        volumes:
+            - db-data:/var/lib/mysql
+        networks:
+            - sftp-net
+
+        # PHPmyAdmin
+    phpmyadmin:
+        image: phpmyadmin:5.2.0-apache
+        container_name: sftp-phpmyadmin
+        restart: unless-stopped
+        tty: true
+        ports:
+            - 8102:80
+        networks:
+            - sftp-net
+        environment:
+            - PMA_ARBITRARY=1
+            - UPLOAD_LIMIT=10000M
+
+networks:
+    sftp-net:
+        driver: bridge
+
+volumes:
+    db-data: ~

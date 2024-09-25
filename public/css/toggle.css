@@ -1,0 +1,48 @@
+:root {
+  --white: #666;
+  --red: #d03827;
+  --green: #17a94c;
+}
+
+input {
+  -webkit-appearance: none;
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--red);
+  transition: background 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background: var(--white);
+  transition: left 0.3s;
+}
+
+input:checked {
+  background: var(--green);
+}
+
+input:checked::after {
+  left: 75%;
+}
+
+.toggle-body {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.can-toggle {
+  display: flex !important;
+  justify-content: center !important;
+}

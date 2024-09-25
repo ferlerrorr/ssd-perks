@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  /* cursor: url("custom-pointer.png"), pointer; */
+}
+
+#vendor-logo {
+  width: 150px;
+  margin-top: 5px;
+}
+
+.notif-container {
+  width: 62%;
+  height: 50px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.notif-container > p {
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
+  overflow-wrap: break-word; /* break at word boundaries */
+  position: relative;
+  max-height: 50px;
+  overflow: hidden;
+}
