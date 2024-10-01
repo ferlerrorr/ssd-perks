@@ -2,7 +2,7 @@ version: "3.8"
 services:
     # PHP Service
     php:
-        container_name: sftp-app
+        container_name: perks-app
         build:
             context: .
             target: php
@@ -17,19 +17,19 @@ services:
             - ./:/var/www
             - ./docker:/docker
         ports:
-            - 8802:8802
+            - 8807:8807
         depends_on:
-            - sftp-db
+            - perks-db
         networks:
-            - sftp-net
+            - perks-net
 
     # Database Server
-    sftp-db:
-        container_name: sftp-db
+    perks-db:
+        container_name: perks-db
         image: mysql:8.0
         command: --sort_buffer_size=50M
         ports:
-            - 3311:3311
+            - 3317:3317
         environment:
             - MYSQL_DATABASE=${DB_DATABASE}
             - MYSQL_USER=${DB_USERNAME}
@@ -39,24 +39,24 @@ services:
         volumes:
             - db-data:/var/lib/mysql
         networks:
-            - sftp-net
+            - perks-net
 
         # PHPmyAdmin
     phpmyadmin:
         image: phpmyadmin:5.2.0-apache
-        container_name: sftp-phpmyadmin
+        container_name: perks-phpmyadmin
         restart: unless-stopped
         tty: true
         ports:
-            - 8102:80
+            - 8107:80
         networks:
-            - sftp-net
+            - perks-net
         environment:
             - PMA_ARBITRARY=1
             - UPLOAD_LIMIT=10000M
 
 networks:
-    sftp-net:
+    perks-net:
         driver: bridge
 
 volumes:
