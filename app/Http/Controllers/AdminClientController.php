@@ -2,28 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\StoreClient;
 
-class StoreClientController extends Controller
+class AdminClientController extends Controller
 {
-    public function cardIDSearch($card_id)
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-
-        $response = Hash::make($card_id);
-
-
-        return response($response);
+        //
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 
-
-    public function storeClientRegister(Request $request)
+    public function adminClientRegister(Request $request)
     {
         // Validate input fields
         $request->validate([
-            'employee_id' => 'required|string|unique:cashier',
+            'employee_id' => 'required|string|unique:admin',
             'password' => 'required|string|min:8',
             'confirm_password' => 'required|string|min:8'
         ]);
@@ -47,7 +60,7 @@ class StoreClientController extends Controller
 
         try {
             // Insert the new admin into the database
-            $admin = StoreClient::create($adminData);
+            $admin = Admin::create($adminData);
 
             return response()->json([
                 'message' => 'Admin registered successfully!',

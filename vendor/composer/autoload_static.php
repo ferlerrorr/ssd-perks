@@ -559,7 +559,7 @@ class ComposerStaticInit7f595aa11c4487192d4f4c8ef130ce0e
         'App\\Http\\Controllers\\DataCronController' => __DIR__ . '/../..' . '/app/Http/Controllers/DataCronController.php',
         'App\\Http\\Controllers\\FileManagerController' => __DIR__ . '/../..' . '/app/Http/Controllers/FileManagerController.php',
         'App\\Http\\Controllers\\GrabController' => __DIR__ . '/../..' . '/app/Http/Controllers/GrabController.php',
-        'App\\Http\\Controllers\\StoreDataController' => __DIR__ . '/../..' . '/app/Http/Controllers/StoreDataController.php',
+        'App\\Http\\Controllers\\StoreClientController' => __DIR__ . '/../..' . '/app/Http/Controllers/StoreClientController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

@@ -29,7 +29,7 @@ services:
         image: mysql:8.0
         command: --sort_buffer_size=50M
         ports:
-            - 3317:3317
+            - 3317:3306
         environment:
             - MYSQL_DATABASE=${DB_DATABASE}
             - MYSQL_USER=${DB_USERNAME}
@@ -41,7 +41,7 @@ services:
         networks:
             - perks-net
 
-        # PHPmyAdmin
+    # PHPmyAdmin
     phpmyadmin:
         image: phpmyadmin:5.2.0-apache
         container_name: perks-phpmyadmin

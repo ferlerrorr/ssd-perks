@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sku', function (Blueprint $table) {
+        Schema::create('admin', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('SKU_Number')->unique()->nullable();
-            $table->string('SKU_Current_Price', 255)->nullable();
-            $table->bigInteger('grab_pack')->nullable();
+            $table->string('employee_id', 360)->unique();
+            $table->string('password', 360);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sku');
+        Schema::dropIfExists('admin');
     }
 };

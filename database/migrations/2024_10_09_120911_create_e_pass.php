@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('store_maintenance', function (Blueprint $table) {
+        Schema::create('epass', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('istore')->unique()->nullable();
-            $table->bigInteger('grab')->nullable();
+            $table->string('employee_id', 360)->unique();
+            $table->string('card_id', 360);
+            $table->boolean('is_active');
+            $table->float('employee_ca')->nullable();
+            $table->float('employee_ar')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('store_maintenance');
+        Schema::dropIfExists('e_pass');
     }
 };

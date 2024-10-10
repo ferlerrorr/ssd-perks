@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('cashier', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('istore')->unique()->nullable();
-            $table->json('grab')->nullable();
+            $table->string('employee_id', 360)->unique();
+            $table->string('password', 360);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('cashier');
     }
 };

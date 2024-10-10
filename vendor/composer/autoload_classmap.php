@@ -12,7 +12,7 @@ return array(
     'App\\Http\\Controllers\\DataCronController' => $baseDir . '/app/Http/Controllers/DataCronController.php',
     'App\\Http\\Controllers\\FileManagerController' => $baseDir . '/app/Http/Controllers/FileManagerController.php',
     'App\\Http\\Controllers\\GrabController' => $baseDir . '/app/Http/Controllers/GrabController.php',
-    'App\\Http\\Controllers\\StoreDataController' => $baseDir . '/app/Http/Controllers/StoreDataController.php',
+    'App\\Http\\Controllers\\StoreClientController' => $baseDir . '/app/Http/Controllers/StoreClientController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

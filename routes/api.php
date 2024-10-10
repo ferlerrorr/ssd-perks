@@ -42,4 +42,5 @@ use Illuminate\Support\Facades\Route;
 
 
 // //!Perks Endpoints
-Route::get('/ssd/card_search/{card_id}', 'App\Http\Controllers\StoreClientController@cardIDSearch');
+Route::post('/ssd/client_register', 'App\Http\Controllers\StoreClientController@storeClientRegister');
+Route::post('/ssd/admin_register', 'App\Http\Controllers\AdminClientController@adminClientRegister');
