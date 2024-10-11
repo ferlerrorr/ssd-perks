@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -125.83595697084947,
-    "scrollLeft": -107.49999572833404,
-    "zoomLevel": 0.9,
+    "scrollTop": -238.891508033981,
+    "scrollLeft": -189.72221468333888,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -235,7 +235,7 @@
           "active": false,
           "left": 14.7163,
           "top": 49.186,
-          "zIndex": 6,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 67.7490234375
         },
@@ -339,6 +339,29 @@
             "id": "15a096d9-229b-48d6-b3d6-7a87fdcf9eb7"
           },
           {
+            "name": "mname",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "360",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "daabbc68-7359-474c-973c-9be8959f3902"
+          },
+          {
             "name": "fname",
             "comment": "",
             "dataType": "VARCHAR",
@@ -383,29 +406,6 @@
               "widthDefault": 60
             },
             "id": "31ce3672-c3e5-427e-9920-5a8650e415bb"
-          },
-          {
-            "name": "mname",
-            "comment": "",
-            "dataType": "VARCHAR",
-            "default": "360",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 64.6005859375,
-              "widthDefault": 60
-            },
-            "id": "daabbc68-7359-474c-973c-9be8959f3902"
           },
           {
             "name": "company_code",
@@ -524,10 +524,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 485.511,
           "top": 47.0971,
-          "zIndex": 7,
+          "zIndex": 17,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -704,7 +704,7 @@
           "active": false,
           "left": 20.9522,
           "top": 303.717,
-          "zIndex": 9,
+          "zIndex": 6,
           "widthName": 80.0380859375,
           "widthComment": 60
         },
@@ -901,10 +901,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 14.4949,
           "top": 556.912,
-          "zIndex": 10,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1288,7 +1288,7 @@
           "active": false,
           "left": 491.5955,
           "top": 412.8272,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 114.0107421875,
           "widthComment": 60
         },
@@ -1527,9 +1527,9 @@
         "value": "Feature's \n\n\n-- Manual Reset Individually or Both\n------- AR\n------- CA\n\n\n--* Added Features for External User \n------- PRKs\n\n\n-- Setting Reset Date Manually?.  \n------- Is there a way to automate this\n\n\n* Calendar Functions and Feature's\n\n*default Password hashed",
         "ui": {
           "active": false,
-          "left": 1160.2777396197687,
-          "top": 466.5046150660445,
-          "zIndex": 1,
+          "left": 1009.2360789549589,
+          "top": 456.0879488132989,
+          "zIndex": 11,
           "width": 256.166661534045,
           "height": 259.9999936421716
         },
