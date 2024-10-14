@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
 
-class StoreClient extends Model
+class Admin extends Model
 {
-    use HasFactory;
-    protected $table = 'cashier';
+
+    protected $table = 'admin';
     protected $fillable = [
         'employee_id',
         'password',

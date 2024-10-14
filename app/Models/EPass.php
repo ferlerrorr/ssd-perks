@@ -5,17 +5,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class EPass extends Model
 {
-    protected $table = 'employee';
+    protected $table = 'e_pass';
     public $timestamps = true;
     protected $fillable = [
         'employee_id',
         'card_id',
-        'fname',
-        'mname',
-        'lname',
-        'address',
-        'company_code',
+        'employee_ar',
+        'employee_ca',
     ];
 }

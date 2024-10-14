@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('epass', function (Blueprint $table) {
+        Schema::create('e_pass', function (Blueprint $table) {
             $table->id();
             $table->string('employee_id', 360)->unique();
             $table->string('card_id', 360);
