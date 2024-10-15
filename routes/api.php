@@ -42,6 +42,16 @@ use Illuminate\Support\Facades\Route;
 
 
 // //!Perks Endpoints
+//Register
 Route::post('/ssd/employee_register', 'App\Http\Controllers\EmployeeController@employeeClientRegister');
 Route::post('/ssd/client_register', 'App\Http\Controllers\StoreClientController@storeClientRegister');
 Route::post('/ssd/admin_register', 'App\Http\Controllers\AdminClientController@adminClientRegister');
+
+
+//Epass
+Route::post('/ssd/e_pass_transaction', 'App\Http\Controllers\EpassTranscationController@storeTransaction');
+Route::get('/ssd/get_transaction', 'App\Http\Controllers\EpassTranscationController@getLatestTransactions');
+Route::patch('/ssd/void_transaction', 'App\Http\Controllers\EpassTranscationController@voidTransaction');
+
+//Set Scheduler
+Route::post('/ssd/set_schedule', 'App\Http\Controllers\EpassSchedulerController@updateSchedule');

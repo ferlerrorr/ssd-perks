@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('e_pass_transaction', function (Blueprint $table) {
             $table->id();
             $table->string('cashier_id', 360);
-            $table->string('employee_id', 360)->unique();
+            $table->string('employee_id', 360);
             $table->string('card_id', 360);
             $table->float('employee_ca');
             $table->float('employee_ar');
             $table->float('amount');
             $table->string('transaction_type', 360);
-            $table->string('transaction_code', 360);
+            $table->string('transaction_code', 360)->unique();
             $table->string('pos_rec_no', 360);
             $table->string('terminal_id', 360);
             $table->string('store_code', 360);

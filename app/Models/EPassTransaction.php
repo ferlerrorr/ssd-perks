@@ -10,6 +10,7 @@ class EPassTransaction extends Model
     protected $table = 'e_pass_transaction';
     public $timestamps = true;
     protected $fillable = [
+        'cashier_id',
         'employee_id',
         'card_id',
         'employee_ar',
@@ -20,5 +21,6 @@ class EPassTransaction extends Model
         'amount',
         'terminal_id',
         'store_code',
+        'is_void',
     ];
 }

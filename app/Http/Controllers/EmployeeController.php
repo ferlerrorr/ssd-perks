@@ -12,7 +12,7 @@ class EmployeeController extends Controller
     {
         // Validate input fields
         $validatedData = $request->validate([
-            'employee_id' => 'required|string|unique:employee', // Correct table name
+            'employee_id' => 'required|string|unique:employee',
             'card_id' => 'required|string',
             'fname' => 'required|string',
             'mname' => 'required|string',
