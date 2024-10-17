@@ -50,8 +50,10 @@ Route::post('/ssd/admin_register', 'App\Http\Controllers\AdminClientController@a
 
 //Epass
 Route::post('/ssd/e_pass_transaction', 'App\Http\Controllers\EpassTranscationController@storeTransaction');
-Route::get('/ssd/get_transaction', 'App\Http\Controllers\EpassTranscationController@getLatestTransactions');
+Route::get('/ssd/get_transaction/{card_id}', 'App\Http\Controllers\EpassTranscationController@getLatestTransaction');
 Route::patch('/ssd/void_transaction', 'App\Http\Controllers\EpassTranscationController@voidTransaction');
+Route::post('/ssd/e_pass_register', 'App\Http\Controllers\EpassTranscationController@register');
+Route::get('/ssd/get_all_transactions', 'App\Http\Controllers\EpassTranscationController@getallTransacionsbyMonth');
 
 //Set Scheduler
 Route::post('/ssd/set_schedule', 'App\Http\Controllers\EpassSchedulerController@updateSchedule');

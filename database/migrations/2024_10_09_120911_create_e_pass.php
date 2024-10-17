@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('employee_id', 360)->unique();
             $table->string('card_id', 360);
-            $table->boolean('is_active');
+            $table->boolean('is_active')->default(true);
             $table->float('employee_ca')->nullable();
             $table->float('employee_ar')->nullable();
             $table->timestamps();
